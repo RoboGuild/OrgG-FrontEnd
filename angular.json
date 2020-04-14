@@ -135,8 +135,13 @@
               "devServerTarget": "assignment5:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "assignment5"
 }
