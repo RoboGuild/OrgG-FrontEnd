@@ -88,7 +88,7 @@
           <div class="form-group"
            [ngClass] = "{'has-error': phone.errors}">
             <label for="PhoneNum" class="control-label">Phone Number:</label>
-            <input #phone="ngModel" class="form-control" [class.has-error]="phone.error" id="PhoneNum" type="text" name="PhoneNum" [(ngModel)] ="employee.PhoneNum" 
+            <input #phone="ngModel" class="form-control" [class.has-error]="phone.errors" id="PhoneNum" type="text" name="PhoneNum" [(ngModel)] ="employee.PhoneNum" 
              pattern="^[1][-][(][1-9][0-9][0-9][)][1-9][0-9][0-9][-][0-9][0-9][0-9][0-9]$" required />
              <span *ngIf="phone.errors" class="help-block">A Correct Phone Number is Required 1-(###)-(###)-(####)</span>
           </div>
