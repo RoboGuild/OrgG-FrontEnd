@@ -1,0 +1,86 @@
+<div class="center">
+  <h2>Employees</h2>
+  <p class="lead">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non odio sed
+    eros tristique bibendum. Nunc quis semper sem.<br />
+    Morbi libero elit elementum quis faucibus ac, condimentum quis nibh.
+  </p>    
+</div> 
+
+  
+  
+  <mat-form-field>    
+    <input 
+      matInput 
+      placeholder="Filter"
+      (keyup)="applyFilter($event.target.value)" >
+  </mat-form-field>
+
+  <table 
+      mat-table 
+      [dataSource]="final" 
+      matSort 
+      class="mat-elevation-z8" 
+      (matSortChange)="sortData($event)"
+      >
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="FullName">
+          <th mat-header-cell mat-sort-header  *matHeaderCellDef > Full Name </th>
+          <td 
+            mat-cell *matCellDef="let employee"
+            (click)="routeToEmployeeDetails(employee._id)"
+          > {{ employee.FirstName }} {{ employee.LastName }} </td>
+        </ng-container>
+      
+        <!-- Address Column -->
+        <ng-container matColumnDef="AddressStreet">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef > Address </th>
+          <td 
+            mat-cell *matCellDef="let employee"
+            (click)="routeToEmployeeDetails(employee._id)">
+             {{ employee.AddressStreet }}, {{ employee.AddressCity }},
+              {{ employee.AddressState }}, {{ employee.AddressZip }} </td>
+        </ng-container>
+
+         <!-- Position Column -->
+         <ng-container matColumnDef="PositionName">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef > Position </th>
+            <td 
+              mat-cell *matCellDef="let employee"
+              (click)="routeToEmployeeDetails(employee._id)">
+               {{ employee.Position.PositionName }} </td>
+          </ng-container>
+      
+        <!-- Phone Column -->
+        <ng-container matColumnDef="PhoneNum">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Phone Number </th>
+          <td 
+            mat-cell *matCellDef="let employee"
+            (click)="routeToEmployeeDetails(employee._id)">
+            {{employee.PhoneNum}} </td>
+        </ng-container>
+      
+        <!-- Hire Date Column -->
+        <ng-container matColumnDef="HireDate">
+          <th mat-header-cell mat-sort-header *matHeaderCellDef> Hire Date </th>
+          <td 
+          mat-cell *matCellDef="let employee"
+          (click)="routeToEmployeeDetails(employee._id)"> 
+            {{employee.HireDate | date: "longDate"}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+      </table>
+
+      <mat-paginator [length]="numEmployees"
+              [pageSize]="sizeChunk"
+              [pageSizeOptions]="[5, 10, 25, 50, 100]"
+              (page)="pageChanged($event)"
+              >
+
+      </mat-paginator>

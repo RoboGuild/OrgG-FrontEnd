@@ -1,0 +1,25 @@
+.center {
+  margin-top: 40px;
+}
+.table-responsive {
+  margin-bottom: 60px;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-form-field {
+  padding: 1em;
+  padding-left: 7em;
+  font-size: 14px;
+  width: 100%;
+}
+
+td:hover {
+  cursor: pointer;
+}

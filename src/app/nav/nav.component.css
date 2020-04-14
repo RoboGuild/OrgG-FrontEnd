@@ -1,0 +1,18 @@
+.home {
+    color: deeppink !important; 
+    font-size: 1.2em !important; 
+}
+
+.employee {
+    color: rgb(120, 160, 170) !important;
+    font-size: 1.2em;
+}
+
+.position {
+    color:  rgb(120, 160, 170) !important;
+    font-size: 1.2em;
+}
+
+.mat-icon{
+    font-size: 1.3em !important;
+}
