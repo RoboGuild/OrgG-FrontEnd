@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prettier": "prettier --write \"src/**/*.{html,js,css}\""
+    "prettier": "prettier --write \"src/**/*.{html,js,css}\"",
+    "post" : "mv /build/* ../BackEnd/public"  
+      
   },
   "private": true,
   "dependencies": {
