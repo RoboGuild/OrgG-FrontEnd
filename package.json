@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "prettier": "prettier --write \"src/**/*.{html,js,css}\"",
-    "post": "mv /build/* ../BackEnd/public"
+    "post": "mv ./dist/* ../BackEnd/public"
   },
   "private": true,
   "dependencies": {
