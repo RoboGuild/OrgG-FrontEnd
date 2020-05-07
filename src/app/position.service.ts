@@ -4,25 +4,23 @@ import { Observable } from 'rxjs';
 import { Position   } from './position';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class PositionService {
+  private url: string = "https://teams-new-api.herokuapp.com";
 
-  private url: string = 'https://assignment-1-web422.herokuapp.com';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  getPositions(): Observable <Position[]> {
-    return this.http.get <Position[]> (`${this.url}/positions`);     
+  getPositions(): Observable<Position[]> {
+    return this.http.get<Position[]>(`${this.url}/positions`);
   }
 
-  savePosition(position : Position) : Observable <any> {
-    return this.http.put <any> (`${this.url}/position/` + position._id, position); 
+  savePosition(position: Position): Observable<any> {
+    return this.http.put<any>(`${this.url}/position/` + position._id, position);
   }
 
   // returns an array but with ONE matching Position
-  getPosition(pid: string) : Observable <Position[]> {
-    return this.http.get <Position[]> (`${this.url}/position/` + pid);
+  getPosition(pid: string): Observable<Position[]> {
+    return this.http.get<Position[]>(`${this.url}/position/` + pid);
   }
-
 } // end of service

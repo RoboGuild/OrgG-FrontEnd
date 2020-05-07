@@ -7,9 +7,9 @@ section {
   padding: 0;
 }
 
-.pink-border {
-  height: 1em;
-  background-color: deeppink;
+.white-border {
+  height: 2em;
+  background-color: rgb(231, 229, 229);
 }
 
 .position,
