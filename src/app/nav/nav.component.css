@@ -1,13 +1,27 @@
 .home {
-    color: deeppink !important; 
     font-size: 1.2em !important; 
+    color: rgb(120, 160, 170) !important;
 }
-
 .employee {
     color: rgb(120, 160, 170) !important;
     font-size: 1.2em;
 }
 
+button.home {
+    width: 200px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+button.home img {
+    object-fit: contain;
+    display: block;
+    width: 100%;
+    margin-top: -30px;
+}
 .position {
     color:  rgb(120, 160, 170) !important;
     font-size: 1.2em;
@@ -15,4 +29,32 @@
 
 .mat-icon{
     font-size: 1.3em !important;
+}
+
+.navbar-inverse {
+    background-color: white;
+    box-shadow: 5px 0px 8px 5px #888888;
+}
+
+
+.navbar-nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.navbar-nav > li {
+    padding: 0;
+}
+
+
+
+.navbar.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: black;
+    height: 5px;
+    transition: all 0.5s;
+}
+
+.navbar.navbar-inverse .navbar-toggle:focus .icon-bar {
+    background-color: white;
 }

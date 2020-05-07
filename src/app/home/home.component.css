@@ -26,3 +26,11 @@ section {
   height: 100%;
 }
 
+.robo-icon {
+  width: 200px;
+  margin: 0 auto;
+}
+.robo-icon img {
+  width: 100%;
+}
+
