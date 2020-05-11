@@ -47,7 +47,9 @@ button.home img {
     padding: 0;
 }
 
-
+.navbar.navbar-inverse .navbar-toggle {
+    background-color: white;
+}
 
 .navbar.navbar-inverse .navbar-toggle .icon-bar {
     background-color: black;
@@ -55,6 +57,10 @@ button.home img {
     transition: all 0.5s;
 }
 
-.navbar.navbar-inverse .navbar-toggle:focus .icon-bar {
+.navbar.navbar-inverse .navbar-toggle:hover .icon-bar {
     background-color: white;
+}
+
+.navbar.navbar-inverse .navbar-toggle:hover {
+    background-color: black;
 }
